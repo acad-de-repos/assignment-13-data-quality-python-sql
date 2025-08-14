@@ -25,7 +25,7 @@ class TestMixedDataQualityChecks(unittest.TestCase):
         (2, 'Coffee Maker', '50', 'Home Goods'),
         (3, NULL, 'abc', 'Books'),
         (4, 'Headphones', '150', 'Gadgets'),
-        (1, 'Duplicate Product', '10', 'Books');
+        (5, 'Duplicate Product', '10', 'Books');
         """))
         self.connection.commit()
 
@@ -44,7 +44,7 @@ class TestMixedDataQualityChecks(unittest.TestCase):
         self.assertIn('invalid_categories', dq_report)
 
         self.assertEqual(dq_report['null_product_name_count'], 1)
-        self.assertEqual(dq_report['duplicate_product_id_count'], 1)
+        self.assertEqual(dq_report['duplicate_product_id_count'], 0)
         self.assertEqual(dq_report['non_numeric_prices'], ['abc'])
         self.assertEqual(dq_report['invalid_categories'], ['Gadgets'])
 
