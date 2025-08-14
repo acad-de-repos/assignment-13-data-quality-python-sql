@@ -1,0 +1,19 @@
+# Requirements for Assignment 13: Data Quality Python SQL
+# This assignment performs data quality checks using a mix of SQL and Pandas
+
+# Core data manipulation and analysis
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Database connectivity and SQL operations
+sqlalchemy>=1.4.0
+
+# Optional but recommended for enhanced functionality
+# Uncomment if you want to use specific database drivers
+# sqlite3  # Built-in with Python, no installation needed
+# psycopg2-binary>=2.9.0  # For PostgreSQL (if needed)
+# pymysql>=1.0.0  # For MySQL (if needed)
+
+# Development and testing (optional)
+# pytest>=6.0.0  # For running tests
+# ipython>=7.0.0  # For interactive development
